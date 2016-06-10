@@ -1,0 +1,4 @@
+*.pyo
+*.pyc
+env/*
+passenger_wsgi.py
