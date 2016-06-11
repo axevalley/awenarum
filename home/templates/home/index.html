@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Awen Arum - Homepage</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/awenarum.css" media="screen">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
-<body>
+{% extends "awenarum/base.html" %}
+{% block content %}
     <h1>Awen Arum</h1>
-</body>
-</html>
+    <h3>Homemade Skincare</h3>
+    {% include "home/loremshort.html" %}
+{% endblock %}
