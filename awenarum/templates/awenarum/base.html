@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/awenarum.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Awen Arum</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}scripts/masonry.pkgd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,8 +20,19 @@
             {% endblock %}
         </div>
         <div class="footer">
-            &copy; Luke Shiner {% now "Y" %}
+            <div class="contact">
+                <p><span class="contact_type">Tel:&nbsp;</span><span class="contact_value"><a href="tel:01460894523">01460&nbsp;894523</a></span></p>
+                <p><span class="contact_type">Email:&nbsp;</span><span class="contact_value"><a href="mailto:info@awen-arum.com">info@awen-arum.com</a></span></p>
+                <p><a href="mailto:luke@lukeshiner.com">&copy;Luke Shiner {% now "Y" %}</a></p>
+            </div>
         </div>
     </div>
+    <script>
+        $(window).on("load", function() {
+            $(".articles").masonry({
+                itemSelector: 'article',
+            })
+        })
+    </script>
 </body>
 </html>

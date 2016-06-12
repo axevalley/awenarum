@@ -1,6 +1,25 @@
 {% extends "awenarum/base.html" %}
 {% block content %}
-    <h1>Awen Arum</h1>
-    <h3>Homemade Skincare</h3>
-    {% include "home/loremshort.html" %}
+<div class="articles">
+    <article class="mainpage_article">
+        <h2>Awen Arum</h2>
+        <h4>Homemade Skincare</h4>
+        {% include "home/loremshort.html" %}
+    </article>
+    <article class="mainpage_article">
+        <h2>Example Article 1</h2>
+        <h4>An Example of an Article</h4>
+        {% include "home/loremshort2.html" %}
+    </article>
+    <article class="mainpage_article">
+        <h2>Example Article 2</h2>
+        <h4>Another Example of an Article</h4>
+        {% include "home/loremshort3.html" %}
+    </article>
+    <article class="mainpage_article">
+        <h2>Example Article 3</h2>
+        <h4>Another Example of an Article</h4>
+        {% include "home/loremshort3.html" %}
+    </article>
+</div>
 {% endblock %}
