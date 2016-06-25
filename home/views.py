@@ -1,7 +1,14 @@
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+
+from . models import HomepageArticle
 
 
 def index(request):
-    return render_to_response(
-        'home/index.html', context_instance=RequestContext(request))
+    articles = HomepageArticle.objects.all()
+    return render(request, 'home/index.html', {'articles': articles})
+
+
+def article(request, article_id):
+    article = get_object_or_404(HomepageArticle, pk=article_id)
+    return render(request, 'home/article.html', {'article': article})

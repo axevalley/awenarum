@@ -1,25 +1,18 @@
 {% extends "awenarum/base.html" %}
+
 {% block content %}
-<div class="articles">
-    <article class="mainpage_article">
-        <h2>Awen Arum</h2>
-        <h4>Homemade Skincare</h4>
-        {% include "home/loremshort.html" %}
-    </article>
-    <article class="mainpage_article">
-        <h2>Example Article 1</h2>
-        <h4>An Example of an Article</h4>
-        {% include "home/loremshort2.html" %}
-    </article>
-    <article class="mainpage_article">
-        <h2>Example Article 2</h2>
-        <h4>Another Example of an Article</h4>
-        {% include "home/loremshort3.html" %}
-    </article>
-    <article class="mainpage_article">
-        <h2>Example Article 3</h2>
-        <h4>Another Example of an Article</h4>
-        {% include "home/loremshort3.html" %}
-    </article>
-</div>
+{% if articles %}
+    <div class="articles">
+        {% for article in articles %}
+            <article class="mainpage_article">
+                <a href="{% url 'home:article' article.id %}"><h2>{{ article.title }}</h2></a>
+                <h4>{{ article.subtitle }}</h4>
+                <img src="{{ article.image.url }}" alt="image" height="200">
+                {{ article.text | linebreaks }}
+            </article>
+        {% endfor %}
+    </div>
+{% else %}
+
+{% endif %}
 {% endblock %}
