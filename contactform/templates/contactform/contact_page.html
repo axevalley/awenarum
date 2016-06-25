@@ -1,0 +1,8 @@
+{% extends "awenarum/base.html" %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}contactform/css/contactform.css">
+{% endblock %}
+{% block content %}
+<h3>Contact</h3>
+{% include "contactform/contact_form.html" %}
+{% endblock %}

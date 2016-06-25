@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'awenarum',
     'home',
+    'contactform',
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -1,0 +1,25 @@
+<form action="" class="contact_form" id="contact_form" type="post">
+    <table class="contact_form">
+        <tr>
+            <td><label for="email_address">Email Address: </label></td>
+            <td><input type="email" name="email_address" size="40"></td>
+        </tr>
+        <tr>
+            <td><label for="message_type">Message Type: </label></td>
+            <td>
+                <input type="radio" name="message_type" value="request">Request<br>
+                <input type="radio" name="message_type" value="query">Query<br>
+                <input type="radio" name="message_type" value="feedback">Feedback<br>
+                <input type="radio" name="message_type" value="other">other<br>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="message_box">Message: </label></td>
+            <td><textarea name="message_box" rows="8" cols="40"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
